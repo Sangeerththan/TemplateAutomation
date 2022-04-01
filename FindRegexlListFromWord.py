@@ -10,12 +10,7 @@ def getCapitalWordsFromDoc(wordDocument):
     return set(capital_letters)
 
 
-words = getCapitalWordsFromDoc("BARA158b.docx")
-
-for word in words:
-    print(word)
-
-def readExcel(document, columnIndex):
-    read = pd.read_excel(document)
+def readExcel(document, sheetName, columnIndex):
+    read = pd.read_excel(document, sheet_name=sheetName)
     labels = read.iloc[:, columnIndex].tolist()
     return set(labels)
