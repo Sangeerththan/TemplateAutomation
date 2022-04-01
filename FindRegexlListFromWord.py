@@ -19,7 +19,3 @@ def readExcel(document, columnIndex):
     read = pd.read_excel(document)
     labels = read.iloc[:, columnIndex].tolist()
     return set(labels)
-
-
-print(set.intersection(readExcel("axxia.xlsx", 8),getCapitalWordsFromDoc("BARA158b.docx")))
-print(getCapitalWordsFromDoc("CRES142a.docx"))
